@@ -1,0 +1,9 @@
+version: "3"
+services:
+  dev:
+    build: ./src/
+    image: src
+    volumes:
+      - ./src:/src
+    entrypoint: 
+      ["/bin/sh", "-c", "cd src && crystal main.cr"]
